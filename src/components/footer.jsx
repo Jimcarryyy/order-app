@@ -1,10 +1,10 @@
-import '../css/index.css';
 import Appstore from '../assets/Appstore.png';
-import OrderLogo from '../assets/Order-logo-2.png';
 import Facebook from '../assets/Facebook.png';
 import Instagram from '../assets/Instagram.png';
-import Tiktok from '../assets/Tiktok.png';
+import OrderLogo from '../assets/Order-logo-2.png';
 import Snapchat from '../assets/Snapchat.png';
+import Tiktok from '../assets/TikTok.png';
+import '../css/index.css';
 
 function Footer(){
     return(
