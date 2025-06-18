@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import BrowseMenu from './pages/browseMenu';
-import Home from './pages/Home';
-import Restaurants from './pages/restaurants';
+import Header from './components/Header.jsx';
+import BrowseMenu from './pages/browseMenu.jsx';
+import Home from './pages/home.jsx';
+import Restaurants from './pages/restaurants.jsx';
 
 function App() {
   return (
