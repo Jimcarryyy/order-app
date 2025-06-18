@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header.jsx';
+import Header from './components/header.jsx';
 import BrowseMenu from './pages/browseMenu.jsx';
 import Home from './pages/home.jsx';
 import Restaurants from './pages/restaurants.jsx';
