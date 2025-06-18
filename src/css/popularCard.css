@@ -1,0 +1,76 @@
+.popular-desc p {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.popular-desc span {
+    color: #fc8a06;
+    font-size: 13px;
+}
+
+img {
+    display: block;
+}
+
+.popular-desc {
+    background-color: #F5F5F5;
+    padding: 10px 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.popular-banner {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pop-cons h2 {
+    font-size: 32px;
+    padding-bottom: 40px;
+}
+
+.pop-cons ,
+.pop-restaurant{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.pop-restaurant h2 {
+    font-size: 32px;
+    padding-bottom: 40px;
+}
+
+.resto-con {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pop-res-con {
+    text-align: center;
+    background-color: #fc8a06;
+    border-radius: 15px;
+}
+
+.pop-res-con p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+}
+
+.similar-resto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    width: 80%;
+    margin: 100px auto;
+}
+
+.similar-resto h2 {
+    font-size: 32px;
+}

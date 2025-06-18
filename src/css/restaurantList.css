@@ -1,0 +1,30 @@
+.resto-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.deals {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 50px;
+}
+
+.menu nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu nav ul li {
+    list-style: none;
+}
+
+.restaurant-list {
+    padding-bottom: 50px;
+}
