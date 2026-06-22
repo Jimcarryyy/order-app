@@ -34,9 +34,12 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
+    padding: 10px 0 10px 24px;
     width: 80%;
+    max-width: 1280px;
     margin: 0 auto;
+    overflow: hidden;
+    gap: 16px;
 }
 
 .h-child a {
@@ -105,7 +108,9 @@ img {
 .header nav ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
 }
 
 .header nav ul li {
@@ -119,8 +124,10 @@ img {
     color: black;
     font-weight: 600;
     transition: 0.3s ease;
-    padding: 10px 30px;
+    padding: 10px 22px;
     border-radius: 50px;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .header nav ul li a:hover {
@@ -136,30 +143,59 @@ img {
 .header button {
     background-color: var(--btnBg);
     border-radius: 30px;
-    padding: 15px 40px;
+    padding: 12px 28px;
+    flex-shrink: 0;
+    border: none;
 }
 
 .header button a {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.header button a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 .header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    max-width: 1280px;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 12px 20px;
+}
+
+.header > a {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header > a img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.header nav {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 /* Home css -----------------------------------------------------------------------------------------------------*/
@@ -168,17 +204,26 @@ img {
     display: flex;
     flex-direction: row;
     width: 80%;
+    max-width: 1280px;
     margin: 0 auto;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--bgColor);
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+}
+
+.image-con {
+    flex-shrink: 0;
+    max-width: 50%;
 }
 
 .image-con img {
     border-radius: 15px;
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .desc-con p {
@@ -193,7 +238,9 @@ img {
 }
 
 .desc-con {
-    padding-left: 50px;
+    padding: 30px 30px 30px 40px;
+    flex: 1;
+    min-width: 0;
 }
 
 .Fast {
@@ -545,6 +592,95 @@ img {
 
 /* Responsive -----------------------------------------------------------------------------------------------------*/
 
+@media (max-width: 1400px) {
+    .h-parent,
+    .header,
+    .home,
+    .download-con,
+    .faqs-con,
+    .counts-con {
+        width: 92%;
+    }
+
+    .h-child-2 {
+        gap: 20px;
+    }
+
+    .h-child h3,
+    .h-sub h3 {
+        font-size: 13px;
+    }
+
+    .h-sub a {
+        font-size: 12px;
+    }
+
+    .h-sub-2 h3 {
+        font-size: 14px;
+    }
+
+    .Items {
+        padding: 14px 12px;
+    }
+
+    /* Two-row header: logo + login on top, nav full width below */
+    .header > a {
+        order: 1;
+    }
+
+    .header button {
+        order: 2;
+        padding: 10px 20px;
+    }
+
+    .header button a {
+        font-size: 14px;
+    }
+
+    .header > a img {
+        height: 38px;
+    }
+
+    .header nav {
+        order: 3;
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .header nav ul {
+        gap: 6px;
+    }
+
+    .header nav ul li a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .desc-con {
+        padding: 24px 20px 24px 28px;
+    }
+
+    .desc-con h1 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .image-con {
+        max-width: 46%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .resto-banner,
+    .pop-cons,
+    .pop-restaurant,
+    .similar-resto,
+    .main,
+    .exclusive-con {
+        width: 92%;
+    }
+}
+
 @media (max-width: 1200px) {
     .h-child-2 {
         gap: 30px;
@@ -613,22 +749,17 @@ img {
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
     }
 
     .header {
-        flex-direction: column;
-        gap: 20px;
         width: 95%;
     }
 
-    .header nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .header nav ul li a {
-        padding: 8px 18px;
-        font-size: 16px;
+        padding: 8px 12px;
+        font-size: 13px;
     }
 
     .home {
@@ -644,6 +775,7 @@ img {
     .image-con {
         order: 2;
         width: 100%;
+        max-width: 100%;
     }
 
     .image-con img {
@@ -771,6 +903,29 @@ img {
 }
 
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header > a,
+    .header button,
+    .header nav {
+        order: unset;
+        width: 100%;
+    }
+
+    .header > a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header button {
+        width: 100%;
+        max-width: 320px;
+    }
+
     .h-child h3,
     .h-sub h3 {
         font-size: 13px;

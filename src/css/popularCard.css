@@ -34,6 +34,7 @@ img {
 .pop-cons ,
 .pop-restaurant{
     width: 80%;
+    max-width: 1280px;
     margin: 0 auto;
     padding-bottom: 50px;
 }
