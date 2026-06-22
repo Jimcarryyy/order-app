@@ -30,7 +30,7 @@ function RestaurantHomeCard({restoBg, desc, header, minOrder, minTime, openTime,
                 </div>
             </div>
             <div className="hero-banner-2">
-                <img src={restoHome} alt="Resto home" />
+                <img src={restoHome} alt="Resto home" className="resto-hero-img" />
                 <img src={Ratings} alt="Ratings Image" className='ratings' />
             </div>
         </div>

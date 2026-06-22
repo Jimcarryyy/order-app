@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Search from '../assets/Search.png';
 import MenuImage from '../assets/menu-image.png';
 import Fries from '../assets/fries.png';
@@ -22,6 +23,13 @@ const menuItems = [
 ];
 
 function BrowseMenu() {
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const filteredItems =
+        activeCategory === 'All'
+            ? menuItems
+            : menuItems.filter((item) => item.category === activeCategory);
+
     return (
         <div>
             <div className="page-hero">
@@ -30,7 +38,7 @@ function BrowseMenu() {
                 <p>Discover burgers, fries, drinks and more from restaurants near you. Search by dish or browse by category.</p>
                 <div className="search-con">
                     <input type="text" placeholder="Search dishes, restaurants..." />
-                    <button>Search</button>
+                    <button type="button">Search</button>
                 </div>
             </div>
 
@@ -45,26 +53,42 @@ function BrowseMenu() {
                             <input type="text" placeholder="Search from menu..." />
                         </div>
                     </div>
-                    <div className="hero-menu">
-                        {menuCategories.map((cat) => (
-                            <button key={cat}>{cat}</button>
-                        ))}
+                    <div className="hero-menu-wrapper">
+                        <div className="hero-menu" role="tablist">
+                            {menuCategories.map((cat) => (
+                                <button
+                                    key={cat}
+                                    type="button"
+                                    className={activeCategory === cat ? 'active' : ''}
+                                    onClick={() => setActiveCategory(cat)}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 <div className="actual-menu">
-                    <h1>Popular Dishes</h1>
-                    <div className="menucard-banner">
-                        {menuItems.map((item, index) => (
-                            <MenuCard
-                                key={index}
-                                title={item.title}
-                                desc={item.desc}
-                                gp={item.gp}
-                                image={item.image}
-                            />
-                        ))}
-                    </div>
+                    <h1>{activeCategory === 'All' ? 'Popular Dishes' : activeCategory}</h1>
+                    {filteredItems.length > 0 ? (
+                        <div className="menucard-banner">
+                            {filteredItems.map((item, index) => (
+                                <MenuCard
+                                    key={index}
+                                    title={item.title}
+                                    desc={item.desc}
+                                    gp={item.gp}
+                                    image={item.image}
+                                />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="menu-empty">
+                            <h3>{activeCategory}</h3>
+                            <p>No items available in this category yet. Check back soon!</p>
+                        </div>
+                    )}
                 </div>
             </div>
 
