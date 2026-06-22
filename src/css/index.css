@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --bgColor: #FAFAFA;
     --fontOrange: #FC8A06;
@@ -15,6 +19,8 @@
 
 img {
     cursor: pointer;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Promo Header css -----------------------------------------------------------------------------------------------------*/
@@ -537,4 +543,373 @@ img {
     align-items: flex-start;
 }
 
+/* Responsive -----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+    .h-child-2 {
+        gap: 30px;
+    }
+
+    .desc-con h1 {
+        width: 100%;
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .order-desc p {
+        font-size: 52px;
+    }
+
+    .pers-con {
+        margin-left: -150px;
+    }
+
+    .faqs-con {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .desc-f p {
+        width: 100%;
+        max-width: 625px;
+    }
+
+    .counts-con h1 {
+        font-size: 48px;
+    }
+
+    .counts-con p {
+        font-size: 20px;
+    }
+
+    .batch,
+    .batch-2,
+    .batch-3 {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .h-parent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 20px;
+        width: 95%;
+    }
+
+    .h-child-2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .h-sub {
+        flex-wrap: wrap;
+    }
+
+    .h-sub-2 {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        width: 95%;
+    }
+
+    .header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header nav ul li a {
+        padding: 8px 18px;
+        font-size: 16px;
+    }
+
+    .home {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .desc-con {
+        padding: 30px 20px;
+        order: 1;
+    }
+
+    .image-con {
+        order: 2;
+        width: 100%;
+    }
+
+    .image-con img {
+        width: 100%;
+        height: auto;
+    }
+
+    .desc-con h1 {
+        font-size: 36px;
+        line-height: 44px;
+        padding-bottom: 20px;
+    }
+
+    .search-con {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .download-con {
+        flex-direction: column;
+        width: 95%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .d-con-1 img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .order-desc {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .order-desc p {
+        font-size: 40px;
+    }
+
+    .pers-con {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .pers-con h1 {
+        font-size: 32px;
+    }
+
+    .faqs-con {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .faqs-con-1 {
+        width: 100%;
+    }
+
+    .faqs-con-1 button {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .faqscard-con {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .faqscard-item {
+        width: 100%;
+        max-width: 238px;
+        flex: 1 1 180px;
+    }
+
+    .counts-con {
+        flex-wrap: wrap;
+        width: 95%;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .batch,
+    .batch-2,
+    .batch-3 {
+        border-right: none;
+        padding-right: 0;
+        flex: 1 1 40%;
+        min-width: 140px;
+    }
+
+    .first-con {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 30px;
+        align-items: flex-start;
+    }
+
+    .links-con {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .subscribe {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .second-con {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 30px;
+        text-align: center;
+    }
+
+    .privacy {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h-child h3,
+    .h-sub h3 {
+        font-size: 13px;
+    }
+
+    .h-sub a {
+        font-size: 12px;
+    }
+
+    .header nav ul li a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .header button {
+        padding: 12px 24px;
+    }
+
+    .header button a {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .desc-con h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .search-con input {
+        padding: 12px 100px 12px 16px;
+        font-size: 14px;
+    }
+
+    .search-con button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .order-desc p {
+        font-size: 32px;
+    }
+
+    .down-con p {
+        font-size: 18px;
+    }
+
+    .counts-con h1 {
+        font-size: 36px;
+    }
+
+    .counts-con p {
+        font-size: 16px;
+    }
+
+    .batch,
+    .batch-2,
+    .batch-3,
+    .batch-4 {
+        flex: 1 1 100%;
+    }
+
+    .subscribe input {
+        padding: 12px 100px 12px 16px;
+        font-size: 14px;
+    }
+
+    .subscribe button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .order-cons p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header > img {
+        max-height: 45px;
+        width: auto;
+    }
+
+    .h-parent,
+    .header,
+    .home,
+    .download-con,
+    .faqs-con,
+    .counts-con {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .h-sub-2 h3 {
+        font-size: 14px;
+    }
+
+    .Basket,
+    .Download,
+    .Items {
+        padding: 10px;
+    }
+
+    .header nav ul {
+        gap: 5px;
+    }
+
+    .header nav ul li a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .desc-con {
+        padding: 20px 15px;
+    }
+
+    .desc-con h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .faqs-con-1 button {
+        font-size: 14px;
+    }
+
+    .faqscard-item img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .first-con {
+        padding: 30px 20px;
+    }
+
+    .second-con {
+        padding: 20px 15px;
+    }
+
+    .privacy p {
+        font-size: 13px;
+    }
+}
 

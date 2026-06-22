@@ -6,7 +6,7 @@ import PartnerCard from './partnerCard';
 function Partner() {
   return (
     <div className="main">
-        <div style={{ display: 'flex', gap: '20px'}}>
+        <div className="partner-row">
         <PartnerCard
             backgroundImage={chefImage}
             badgeText="Earn more with lower fees"

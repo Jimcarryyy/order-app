@@ -413,3 +413,307 @@ iframe {
     padding-top: 50px;
 }
 
+.map-wrapper {
+    width: 80%;
+    height: 400px;
+    margin: 50px auto;
+}
+
+/* Responsive -----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+    .main-con,
+    .deliveryInfo,
+    .resto-home,
+    .menu-hero-banner {
+        width: 95%;
+    }
+
+    .customer-nav h1 {
+        font-size: 36px;
+    }
+
+    .customer-con {
+        width: 100%;
+        max-width: 496px;
+        flex: 1 1 300px;
+        height: auto;
+        min-height: 270px;
+    }
+
+    .con-2 {
+        width: 100%;
+        max-width: 447px;
+        flex: 1 1 300px;
+    }
+
+    .first-container,
+    .second-container,
+    .third-container {
+        width: 100%;
+        flex: 1 1 300px;
+    }
+
+    .hero-banner h1 {
+        font-size: 40px;
+    }
+
+    .discount-card {
+        width: 100%;
+        max-width: 496px;
+        flex: 1 1 300px;
+        height: auto;
+        min-height: 280px;
+    }
+
+    .menucard-con {
+        width: 100%;
+        max-width: 490px;
+        flex: 1 1 280px;
+    }
+
+    .map-wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .deliveryInfo {
+        flex-direction: column;
+    }
+
+    .first-container,
+    .second-container,
+    .third-container {
+        width: 100%;
+    }
+
+    .resto-home {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 40px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-banner {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-banner h1 {
+        font-size: 32px;
+    }
+
+    .buttons-con {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .open-time {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+        padding: 10px 30px;
+    }
+
+    .hero-banner-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-banner-2 .ratings {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: -30px;
+    }
+
+    .hero-banner-2 img:first-child {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .menu-desc {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .search-container input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .hero-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-menu button {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .discount-banner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menucard-banner {
+        justify-content: center;
+    }
+
+    .customer-review {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .customer-nav {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .actual-menu h1 {
+        font-size: 32px;
+    }
+
+    .map-wrapper {
+        width: 95%;
+        height: 350px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-con {
+        margin: 30px auto;
+        gap: 25px;
+    }
+
+    .customer-nav h1 {
+        font-size: 28px;
+    }
+
+    .customer-con,
+    .con-2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .prof-info {
+        font-size: 16px;
+    }
+
+    .hero-banner h1 {
+        font-size: 26px;
+    }
+
+    .first-btn button,
+    .second-btn button {
+        padding: 10px 20px;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .menu-desc h2 {
+        font-size: 24px;
+    }
+
+    .actual-menu h1 {
+        font-size: 28px;
+        padding-bottom: 25px;
+    }
+
+    .menucard-con {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menucard-desc {
+        align-items: center;
+    }
+
+    .menucard-image .plus-icon {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .ratings-con img {
+        max-width: 100%;
+        margin-bottom: -60px;
+    }
+
+    .map-wrapper {
+        height: 300px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .resto-home {
+        padding: 30px 15px;
+        margin: 30px auto;
+    }
+
+    .hero-banner p {
+        font-size: 16px;
+    }
+
+    .hero-banner h1 {
+        font-size: 22px;
+    }
+
+    .buttons-con {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .first-btn button,
+    .second-btn button {
+        width: 100%;
+    }
+
+    .open-time {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu-hero-banner {
+        margin: 30px auto;
+    }
+
+    .discount-banner {
+        margin: 30px 0;
+    }
+
+    .discount-card {
+        min-height: 240px;
+    }
+
+    .disc-info h2 {
+        font-size: 24px;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        height: 250px;
+    }
+}

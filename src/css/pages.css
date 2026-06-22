@@ -1,0 +1,462 @@
+.page-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.page-hero {
+    width: 80%;
+    margin: 30px auto 40px;
+    padding: 40px 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--bgColor);
+}
+
+.page-hero h1 {
+    font-size: 44px;
+    line-height: 54px;
+    padding-bottom: 15px;
+}
+
+.page-hero h1 span {
+    color: var(--fontOrange);
+}
+
+.page-hero p {
+    font-size: 16px;
+    color: #333;
+    max-width: 600px;
+}
+
+.page-hero .search-con {
+    margin-top: 25px;
+}
+
+/* Track Order */
+
+.track-order-con {
+    width: 80%;
+    margin: 30px auto 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.track-form-card,
+.track-status-card {
+    background-color: var(--bgColor);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.track-form-card {
+    flex: 1 1 380px;
+}
+
+.track-status-card {
+    flex: 1 1 480px;
+}
+
+.track-form-card h2,
+.track-status-card h2 {
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+.track-form-card label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.track-form-card input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.track-form-card button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--fontOrange);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+.track-form-card button:hover {
+    background-color: #e07a05;
+}
+
+.order-summary {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.order-summary-info h3 {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.order-summary-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.order-summary-total {
+    text-align: right;
+}
+
+.order-summary-total h3 {
+    font-size: 24px;
+    color: var(--fontOrange);
+}
+
+.order-summary-total p {
+    font-size: 14px;
+    color: #666;
+}
+
+.track-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-step:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-step:last-child::before {
+    display: none;
+}
+
+.timeline-step.completed::before {
+    background-color: var(--fontOrange);
+}
+
+.timeline-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ddd;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.timeline-step.completed .timeline-dot,
+.timeline-step.active .timeline-dot {
+    background-color: var(--fontOrange);
+}
+
+.timeline-step.active .timeline-dot {
+    box-shadow: 0 0 0 4px rgba(252, 138, 6, 0.25);
+}
+
+.timeline-content h4 {
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.timeline-step.active .timeline-content h4 {
+    color: var(--fontOrange);
+}
+
+/* Login / Signup */
+
+.auth-con {
+    width: 80%;
+    margin: 30px auto 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.auth-card {
+    flex: 1 1 440px;
+    max-width: 480px;
+    background-color: var(--bgColor);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.auth-card h1 {
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+.auth-card > p {
+    font-size: 15px;
+    color: #666;
+    padding-bottom: 25px;
+}
+
+.auth-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 30px;
+    background-color: #eee;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+.auth-tabs button.active {
+    background-color: var(--fontOrange);
+    color: white;
+}
+
+.auth-field {
+    margin-bottom: 20px;
+}
+
+.auth-field label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.auth-field input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--btnBg);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.auth-submit:hover {
+    background-color: #0a1235;
+}
+
+.auth-divider {
+    text-align: center;
+    margin: 25px 0;
+    color: #999;
+    font-size: 14px;
+    position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.auth-divider::before { left: 0; }
+.auth-divider::after { right: 0; }
+
+.auth-social {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.auth-social button {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-side {
+    flex: 1 1 380px;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.auth-side-card {
+    background-color: #E0E1DC;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.auth-side-card h3 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.auth-side-card p {
+    font-size: 15px;
+    color: #444;
+    padding-bottom: 15px;
+}
+
+.auth-side-card a {
+    color: var(--fontOrange);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-side-card a:hover {
+    text-decoration: underline;
+}
+
+.offers-page .discount-banner {
+    width: 80%;
+    margin: 0 auto 50px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .page-hero,
+    .page-section,
+    .track-order-con,
+    .auth-con,
+    .offers-page .discount-banner {
+        width: 95%;
+    }
+
+    .track-order-con,
+    .auth-con {
+        flex-direction: column;
+    }
+
+    .auth-card,
+    .auth-side {
+        max-width: 100%;
+    }
+
+    .page-hero {
+        padding: 30px 25px;
+    }
+
+    .page-hero h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .track-form-card h2,
+    .track-status-card h2 {
+        font-size: 22px;
+    }
+
+    .auth-card {
+        padding: 30px 25px;
+    }
+
+    .auth-card h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero,
+    .page-section,
+    .track-order-con,
+    .auth-con,
+    .offers-page .discount-banner {
+        width: 100%;
+    }
+
+    .page-hero {
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .auth-social {
+        flex-direction: column;
+    }
+}

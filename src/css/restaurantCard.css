@@ -65,3 +65,20 @@
     font-size: 18px;
     margin: 0;
 }
+
+/* Responsive -----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+    .restaurant-card {
+        width: 100%;
+        max-width: 494px;
+        flex: 1 1 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

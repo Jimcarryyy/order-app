@@ -1,28 +1,43 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import User from '../assets/Male User.png';
 import Logo from '../assets/Order-logo.png';
 import PromoHeader from './promo-header';
 
-function Header() {
-    const [active, setActive] = useState("Home");
+const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/browsemenu', label: 'Browse menu' },
+    { path: '/specialoffers', label: 'Special offers' },
+    { path: '/restaurants', label: 'Restaurants' },
+    { path: '/trackorder', label: 'Track Order' },
+];
 
-    const handleClick = (menuName) => {
-        setActive(menuName);
+function Header() {
+    const location = useLocation();
+
+    const isActive = (path) => {
+        if (path === '/') return location.pathname === '/';
+        return location.pathname.startsWith(path);
     };
 
     return (
         <div>
             <PromoHeader />
             <div className="header">
-                <img src={Logo} alt="Order Logo Image" />
+                <Link to="/">
+                    <img src={Logo} alt="Order Logo Image" />
+                </Link>
                 <nav>
                     <ul>
-                        <li><Link to="/" className={active === "Home" ? 'active' : ''} onClick={() => handleClick("Home")}>Home</Link></li>
-                        <li><Link to="/browsemenu" className={active === "Browse menu" ? 'active' : ''} onClick={() => handleClick("Browse Menu")}>Browse menu</Link></li>
-                        <li><Link to="/specialoffers" className={active === "Special offers" ? 'active' : ''} onClick={() => handleClick("Special offers")}>Special offers</Link></li>
-                        <li><Link to="/restaurants" className={active === "Restaurant" ? 'active' : ''} onClick={() => handleClick("Restaurant")}>Restaurants</Link></li>
-                        <li><Link to="/trackOrder" className={active === "TrackOrder" ? 'active' : ''} onClick={() => handleClick("TrackOrder")}>Track Order</Link></li>
+                        {navLinks.map(({ path, label }) => (
+                            <li key={path}>
+                                <Link
+                                    to={path}
+                                    className={isActive(path) ? 'active' : ''}
+                                >
+                                    {label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 <button>

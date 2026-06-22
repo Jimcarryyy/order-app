@@ -6,3 +6,20 @@
     padding: 20px;
     border-radius: 12px;
 }
+
+/* Responsive -----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+    .exclusive-con {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .exclusive-con {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px 15px;
+        text-align: center;
+    }
+}

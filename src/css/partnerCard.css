@@ -1,7 +1,7 @@
 .partner-card {
   position: relative;
-  width: 80%;
-  max-width: 754px;
+  flex: 1 1 calc(50% - 10px);
+  min-width: 0;
   height: 425px;
   border-radius: 16px;
   overflow: hidden;
@@ -61,4 +61,77 @@
     width: 80%;
     margin: 0 auto;
     margin-bottom: 40px;
+}
+
+.partner-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+/* Responsive -----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+    .main {
+        width: 95%;
+    }
+
+    .partner-card {
+        height: 380px;
+    }
+
+    .partner-card .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 992px) {
+    .partner-row {
+        flex-wrap: wrap;
+    }
+
+    .partner-card {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-card {
+        height: 320px;
+    }
+
+    .partner-card .content {
+        left: 30px;
+        bottom: 24px;
+    }
+
+    .partner-card .badge {
+        left: 30px;
+        font-size: 16px;
+        padding: 6px 24px;
+    }
+
+    .partner-card .title {
+        font-size: 28px;
+    }
+
+    .partner-card .btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-card {
+        height: 280px;
+    }
+
+    .partner-card .title {
+        font-size: 24px;
+    }
+
+    .partner-card .subtitle {
+        font-size: 16px;
+    }
 }
